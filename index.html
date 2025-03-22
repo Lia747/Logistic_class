@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Flowchart Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* Node Styles */
+        .node {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+            min-width: 150px;
+        }
+
+        .supply { background-color: #0d6efd; }
+        .warehouse { background-color: #6c757d; }
+        .transport { background-color: #dc3545; }
+        .home { background-color: #198754; }
+
+        .arrow {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        /* Notes section */
+        .notes-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* New Stylish Title */
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #0d6efd, #198754);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Logistics Tracker</a>
+            <form class="d-flex ms-auto">
+                <input class="form-control me-2" type="search" placeholder="Enter Track Number" aria-label="Search">
+                <button class="btn btn-light" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Header and Notes Section -->
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="title">Logistics Flowchart Tracker</h1>
+            </div>
+            <div class="col-md-4">
+                <div class="notes-section">
+                    <h5>Notes</h5>
+                    <textarea class="form-control mb-2" rows="4" placeholder="Add your notes here..."></textarea>
+                    <button class="btn btn-primary w-100">Send Notes</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logistics Flowchart Track -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-2 node supply">Supply</div>
+            <div class="col-1 arrow">→</div>
+            <div class="col-2 node warehouse">Warehouse</div>
+            <div class="col-1 arrow">→</div>
+            <div class="col-2 node transport">Transport</div>
+            <div class="col-1 arrow">→</div>
+            <div class="col-2 node warehouse">Warehouse</div>
+            <div class="col-1 arrow">→</div>
+            <div class="col-2 node home">Home</div>
+        </div>
+
+        <!-- Track Status Section -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h4 class="text-primary">Track Progress</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">✔️ Supply - Completed</li>
+                    <li class="list-group-item">✔️ Warehouse - Completed</li>
+                    <li class="list-group-item">✔️ Transport - In Progress</li>
+                    <li class="list-group-item">⏳ Warehouse - Pending</li>
+                    <li class="list-group-item">🏠 Home - Pending</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.
+
+
+net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
